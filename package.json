@@ -1,0 +1,21 @@
+{
+  "name": "jason-young-awm-website",
+  "version": "1.0.0",
+  "description": "Jason Young - All Western Mortgage Website (10DLC/A2P Compliant)",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=index.html",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "mortgage",
+    "loan-officer",
+    "10DLC",
+    "A2P"
+  ],
+  "author": "Jason Young",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
