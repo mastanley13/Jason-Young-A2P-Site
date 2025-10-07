@@ -1,21 +1,25 @@
 {
-  "name": "jason-young-awm-website",
-  "version": "1.0.0",
-  "description": "Jason Young - All Western Mortgage Website (10DLC/A2P Compliant)",
-  "main": "index.html",
+  "name": "jason-young-mortgage",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "live-server --port=3000 --open=index.html",
-    "start": "npm run dev"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [
-    "mortgage",
-    "loan-officer",
-    "10DLC",
-    "A2P"
-  ],
-  "author": "Jason Young",
-  "license": "ISC",
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.5.4"
+  },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.4",
+    "@eslint/eslintrc": "^3"
   }
 }

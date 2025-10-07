@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jason Young - All Western Mortgage</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="components.js"></script>
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>loadHeader('contact');</script>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>Ready to start your mortgage journey? Contact us today!</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="sms_consent" id="sms_consent">
+                                    By checking this box, I consent to receive transactional and marketing messages from Jason Young / All Western Mortgage related to my account  or services I have requested. These messages may include appointment reminders, order confirmations, account notifications, among others. Message frequency may vary. Message & data rates may apply. Reply HELP for help or STOP to opt-out at any time.
+                                </label>
+                            </div>
+
+                            <div class="form-disclaimer">
+                                <p>By submitting this form, you agree to our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+                        <div class="privacy-notice">
+                            <h3>PRIVACY POLICY</h3>
+                            <p><strong>At All Western Mortgage, we value your privacy.</strong> We collect personal information you provide (like contact and financial details) to process mortgage applications and improve our services. We do not sell or rent your data. We use cookies to enhance your online experience. You can control cookies via your browser settings. We implement security measures to protect your data.</p>
+                            <p><strong>For questions, access requests, or updates to your information, email us at <a href="mailto:jyoung@allwestern.com">jyoung@allwestern.com</a> or call us at <a href="tel:678-608-2944">678-608-2944</a>.</strong></p>
+                            <p>For more information, please review our complete <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-sidebar">
+                        <div class="info-card">
+                            <h3>Contact Information</h3>
+
+                            <div class="info-item">
+                                <h4>Jason Young</h4>
+                                <p>Loan Officer</p>
+                                <p>NMLS# 7513</p>
+                            </div>
+
+                            <div class="info-item">
+                                <h4>Direct Tel</h4>
+                                <p><a href="tel:678-608-2944">(678) 608-2944</a></p>
+                            </div>
+
+                            <div class="info-item">
+                                <h4>Email</h4>
+                                <p><a href="mailto:jyoung@allwestern.com">jyoung@allwestern.com</a></p>
+                            </div>
+
+                            <div class="info-item">
+                                <h4>Licensed States</h4>
+                                <p>AL, GA, FL, TN, VA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script>loadFooter();</script>
+
+    <!-- Payment Calculator Modal -->
+    <div id="calculatorModal" class="calculator-modal">
+        <div class="calculator-content">
+            <div class="calculator-header">
+                <h2>Payment Calculator</h2>
+                <button class="close-calculator" onclick="closeCalculator()">&times;</button>
+            </div>
+            <div class="calculator-body">
+                <div class="calc-input-group">
+                    <label for="loanAmount">Loan Amount</label>
+                    <input type="number" id="loanAmount" value="100000" min="0">
+                    <span>$</span>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="loanTerm">Loan Term</label>
+                    <input type="number" id="loanTerm" value="20" min="1" max="50">
+                    <span>years</span>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="rate">Rate</label>
+                    <input type="number" id="rate" value="4" min="0" max="20" step="0.01">
+                    <span>%</span>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="propertyTax">Property Tax</label>
+                    <input type="number" id="propertyTax" value="0" min="0">
+                    <span>$/year</span>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="pmiInsurance">PMI Insurance</label>
+                    <input type="number" id="pmiInsurance" value="0" min="0">
+                    <span>$/year</span>
+                </div>
+
+                <div class="calc-input-group">
+                    <label for="otherCost">Other Cost</label>
+                    <input type="number" id="otherCost" value="0" min="0">
+                    <span>$/year</span>
+                </div>
+
+                <div class="calc-button-container">
+                    <button class="calc-button" onclick="calculatePayment()">Calculate</button>
+                </div>
+
+                <div class="calc-results">
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Total of <span id="numberOfPayments">240.00</span> Monthly Payments</span>
+                        <span class="calc-result-value" id="totalPayments">$145,435.28</span>
+                    </div>
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Total Interest Paid</span>
+                        <span class="calc-result-value" id="totalInterest">$45,435.28</span>
+                    </div>
+                    <div class="calc-result-row">
+                        <span class="calc-result-label">Monthly Pay</span>
+                        <span class="calc-result-value" id="monthlyPay">$605.98</span>
+                    </div>
+                </div>
+            </div>
+            <div class="calc-footer">
+                powered by <a href="https://calculator.net" target="_blank">calculator.net</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

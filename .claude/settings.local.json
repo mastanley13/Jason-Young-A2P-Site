@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(npm install)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(npx create-next-app:*)",
+      "Read(//c/Users/Administrator/.cursor-projects/projects/**)",
+      "Bash(npm init:*)",
+      "Bash(grep:*)",
+      "Bash(timeout 10 npm run dev)",
+      "Bash(npm run build:*)",
+      "Bash(cat:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []
