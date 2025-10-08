@@ -26,6 +26,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: padding 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    transform: translateY(0);
+}
+
+header.scrolled {
+    padding: 8px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 header .container {
@@ -40,6 +47,11 @@ header .container {
     max-height: 50px;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+    transition: max-height 0.3s ease;
+}
+
+header.scrolled .logo img {
+    max-height: 35px;
 }
 
 nav ul {
@@ -763,6 +775,11 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Hide header when scrolling down on mobile */
+    header.hidden {
+        transform: translateY(-100%);
+    }
+
     header .container {
         flex-direction: column;
         gap: 20px;
@@ -799,7 +816,12 @@ footer {
     }
 
     .gohighlevel-form {
-        height: 1000px;
+        min-height: 1400px;
+    }
+
+    .gohighlevel-form iframe {
+        height: 1400px !important;
+        min-height: 1400px;
     }
 
     .footer-grid {
