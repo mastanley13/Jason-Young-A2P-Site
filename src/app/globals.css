@@ -280,16 +280,33 @@ nav a.active {
     gap: 50px;
 }
 
-.contact-form-container {
-    background: white;
-    padding: 40px;
+.gohighlevel-form {
+    height: 1200px;
+    width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
-.contact-form-container h2 {
-    margin-bottom: 30px;
-    color: #0066cc;
+/* Ensure GoHighLevel form links are blue */
+.gohighlevel-form a,
+.gohighlevel-form iframe a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+}
+
+.gohighlevel-form a:hover,
+.gohighlevel-form iframe a:hover {
+    color: #0052a3 !important;
+}
+
+/* Target iframe content specifically */
+#inline-uEcLi2YgOW8D6f0JNdCE {
+    color: #333;
+}
+
+/* Override any global link styles that might affect the iframe */
+.gohighlevel-form iframe {
+    color: #333 !important;
 }
 
 .form-group {
@@ -780,6 +797,10 @@ footer {
 
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .gohighlevel-form {
+        height: 1000px;
     }
 
     .footer-grid {
