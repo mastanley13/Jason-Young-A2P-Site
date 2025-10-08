@@ -19,6 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preload GoHighLevel form resources for faster loading */}
+        <link rel="preload" href="https://api.leadconnectorhq.com/widget/form/uEcLi2YgOW8D6f0JNdCE" as="document" />
+        <link rel="preload" href="https://link.msgsndr.com/js/form_embed.js" as="script" />
+      </head>
       <body>
         <Header />
         {children}
